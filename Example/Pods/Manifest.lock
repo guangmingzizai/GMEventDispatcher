@@ -1,0 +1,27 @@
+PODS:
+  - Expecta (1.0.6)
+  - GMEventDispatcher (0.1.0)
+  - Specta (1.0.7)
+
+DEPENDENCIES:
+  - Expecta
+  - GMEventDispatcher (from `../`)
+  - Specta
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Expecta
+    - Specta
+
+EXTERNAL SOURCES:
+  GMEventDispatcher:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
+  GMEventDispatcher: 470bdc9be66915107d41fac97596141f3a639c5e
+  Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
+
+PODFILE CHECKSUM: 80c468c506ce70238d0f1b083f21ceae4816917a
+
+COCOAPODS: 1.6.1

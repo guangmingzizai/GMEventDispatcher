@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'GMEventDispatcher'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of GMEventDispatcher.'
+  s.summary          = 'Event dispatcher used for inter-module communication.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,13 +18,17 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Like Flux's dispatcher, this library is a part of implementation of flux pattern.
+It mainly be used for inter-module communication.
+Consider the scene, module A calls module B, then A needs callbacks from B. MFRouter is not suitable for this scene, we want a type-safe, simple, easy to use solution.
+This is a maybe solution, A calls B with a event dispatcher, you can consider it as a unidirection pipeline, A observes events from the event dispatcher, B dispatcher events to A with the event dispatcher.
+To be type-safe, we encourage the called module defines events need to be dispatched.
                        DESC
 
   s.homepage         = 'https://github.com/guangmingzizai/GMEventDispatcher'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'guangmingzizai' => 'wangjf01@missfresh.cn' }
+  s.author           = { 'guangmingzizai' => 'guangmingzizai@qq.com' }
   s.source           = { :git => 'https://github.com/guangmingzizai/GMEventDispatcher.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
@@ -38,5 +42,4 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

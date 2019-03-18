@@ -1,0 +1,6 @@
+framework module Pods_GMEventDispatcher_Tests {
+  umbrella header "Pods-GMEventDispatcher_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

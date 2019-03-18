@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,7 +20,56 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZYA-MT-oFd">
+                                <rect key="frame" x="94.5" y="131" width="186" height="30"/>
+                                <state key="normal" title="Add target-action observer"/>
+                                <connections>
+                                    <action selector="addTargetActionObserver:" destination="whP-gf-Uak" eventType="touchDragInside" id="Erp-gL-U8b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMm-7J-RhR">
+                                <rect key="frame" x="120.5" y="184" width="134" height="30"/>
+                                <state key="normal" title="Add block observer"/>
+                                <connections>
+                                    <action selector="addBlockObserver:" destination="whP-gf-Uak" eventType="touchDragInside" id="TRq-Wn-6Nf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVn-jf-ZqY">
+                                <rect key="frame" x="81" y="234" width="213" height="30"/>
+                                <state key="normal" title="Remove target-action observer"/>
+                                <connections>
+                                    <action selector="removeTargetActionObserver:" destination="whP-gf-Uak" eventType="touchDragInside" id="XMi-zO-8Un"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xa0-Eh-yyb">
+                                <rect key="frame" x="107" y="284" width="161" height="30"/>
+                                <state key="normal" title="Remove block observer"/>
+                                <connections>
+                                    <action selector="removeBlockObserver:" destination="whP-gf-Uak" eventType="touchDragInside" id="RnT-jh-ZFM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyK-KA-JdN">
+                                <rect key="frame" x="136" y="334" width="103" height="30"/>
+                                <state key="normal" title="Dispatch event"/>
+                                <connections>
+                                    <action selector="dispatchEvent:" destination="whP-gf-Uak" eventType="touchDragInside" id="MyU-hq-3Px"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xa0-Eh-yyb" firstAttribute="top" secondItem="FVn-jf-ZqY" secondAttribute="bottom" constant="20" id="9fW-qB-BEV"/>
+                            <constraint firstItem="OMm-7J-RhR" firstAttribute="top" secondItem="ZYA-MT-oFd" secondAttribute="bottom" constant="23" id="9vU-TT-ZQR"/>
+                            <constraint firstItem="ZYA-MT-oFd" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="HyA-05-Hto"/>
+                            <constraint firstItem="oyK-KA-JdN" firstAttribute="top" secondItem="Xa0-Eh-yyb" secondAttribute="bottom" constant="20" id="JQD-oB-0Ua"/>
+                            <constraint firstItem="OMm-7J-RhR" firstAttribute="centerX" secondItem="ZYA-MT-oFd" secondAttribute="centerX" id="Ppy-og-kqH"/>
+                            <constraint firstItem="FVn-jf-ZqY" firstAttribute="centerX" secondItem="OMm-7J-RhR" secondAttribute="centerX" id="XNJ-G1-Msb"/>
+                            <constraint firstItem="oyK-KA-JdN" firstAttribute="centerX" secondItem="Xa0-Eh-yyb" secondAttribute="centerX" id="Xro-6a-bJ7"/>
+                            <constraint firstItem="ZYA-MT-oFd" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="111" id="em1-2q-ccA"/>
+                            <constraint firstItem="FVn-jf-ZqY" firstAttribute="top" secondItem="OMm-7J-RhR" secondAttribute="bottom" constant="20" id="fBs-eq-97T"/>
+                            <constraint firstItem="Xa0-Eh-yyb" firstAttribute="centerX" secondItem="FVn-jf-ZqY" secondAttribute="centerX" id="yn9-g2-Qtw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>

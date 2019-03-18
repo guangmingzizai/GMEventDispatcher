@@ -1,0 +1,6 @@
+framework module GMEventDispatcher {
+  umbrella header "GMEventDispatcher-umbrella.h"
+
+  export *
+  module * { export * }
+}
