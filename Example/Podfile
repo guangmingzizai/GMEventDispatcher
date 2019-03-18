@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'GMEventDispatcher_Example' do
+  pod 'GMEventDispatcher', :path => '../'
+
+  target 'GMEventDispatcher_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+    pod 'Expecta'
+  end
+end
