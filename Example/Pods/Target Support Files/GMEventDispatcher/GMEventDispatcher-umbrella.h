@@ -14,6 +14,7 @@
 #import "GMEventDispatcher.h"
 #import "GMEventObserver.h"
 #import "NSArray+GMAdd.h"
+#import "NSDictionary+GMEvent.h"
 
 FOUNDATION_EXPORT double GMEventDispatcherVersionNumber;
 FOUNDATION_EXPORT const unsigned char GMEventDispatcherVersionString[];

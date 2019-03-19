@@ -62,6 +62,7 @@
 - (IBAction)dispatchEvent:(id)sender {
     GMDemoEvent *event = [GMDemoEvent new];
     [_eventDispatcher dispatchEvent:event];
+    [_eventDispatcher dispatchEvent:@{ @"message": @"hello world" }];
 }
 
 #pragma mark - Handle event

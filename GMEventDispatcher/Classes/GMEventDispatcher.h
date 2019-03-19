@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "GMEvent.h"
+#import "NSDictionary+GMEvent.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
